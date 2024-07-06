@@ -46,7 +46,7 @@ Technologies Used: List of technologies used. -->
 
 ## Contact
 
-You can reach me via email at [your.email@example.com](mailto:nikazizicareer@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/nik-azizi-nik-yahya-666994216/) and [GitHub](https://github.com/nikazizi563).
+You can reach me via email at [nikazizicareer@gmail.com](mailto:nikazizicareer@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/nik-azizi-nik-yahya-666994216/) and [GitHub](https://github.com/nikazizi563).
 
 Feel free to explore more projects and details on my [portfolio website](https://nikazizi563.github.io).
  

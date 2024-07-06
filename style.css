@@ -101,7 +101,8 @@ header {
 /* Section styles */
 section {
   background-color: #fff;
-  margin-bottom: 2rem;
+  margin-top: 2rem; /* Increase the bottom margin */
+  margin-bottom: 2rem; /* Increase the bottom margin */
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
@@ -143,10 +144,18 @@ section {
   color: #666;
 }
 
-.btn-container {
+.btn-container1 {
   margin-top: 2rem;
   text-align: center;
 }
+
+.btn-container2 {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
 
 .btn {
   display: inline-block;
@@ -191,13 +200,64 @@ section {
 }
 
 .arrow {
-  margin-top: 2rem;
-  width: 50px;
-  height: 50px;
+  margin-top: 3rem; /* Add more space above the arrow */
+  width: 70px; /* Increase the size */
+  height: 70px; /* Increase the size */
   cursor: pointer;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for hover effects */
+  opacity: 0.8; /* Slightly transparent by default */
+}
+
+.arrow:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+  opacity: 1; /* Fully opaque on hover */
+}
+
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #949494;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#backToTop:hover {
+  background-color: #333;
+}
+
+.collapsible {
+  text-align: center;
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin-top: 1rem; /* Increase the bottom margin */
+  margin-bottom: 1rem; /* Increase the bottom margin */
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
 }
 
 /* About section */
@@ -296,13 +356,45 @@ section {
 }
 
 .project-btn {
-  margin: 1rem 0;
+  width: 150px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Example of how you might style the button colors */
+.project-btn.btn-color-1 {
+  background-color: #333;
+}
+
+.project-btn.btn-color-1:hover {
+  background-color: #666;
+}
+
+.project-btn.btn-color-2 {
+  background-color: #ffd700;
+  color: #333;
+}
+
+.project-btn.btn-color-2:hover {
+  background-color: #cba900;
 }
 
 .color-container {
-  flex: 1 1 22%;
-  margin: 1rem 0.5%;
-  padding: 1rem;
+  flex: 1 1 calc(25% - 1rem); /* Allows four containers per row with some spacing */
+  margin: 1rem; /* Margin around each container */
+  padding: 1rem; /* Padding inside each container */
+  max-width: calc(25% - 2rem); /* Ensures max width with margins */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
   display: flex;
   flex-direction: column;
@@ -387,8 +479,20 @@ footer {
   margin-top: 1rem;
 }
 
+@media (max-width: 1200px) {
+  .color-container {
+    flex: 1 1 calc(50% - 1rem); /* Two containers per row on smaller screens */
+    max-width: calc(50% - 2rem);
+  }
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
+  .color-container {
+    flex: 1 1 100%; /* One container per row on mobile */
+    max-width: 100%;
+  }
+
   .wrapper {
     width: 90%;
     margin: 0 auto;
@@ -397,7 +501,6 @@ footer {
   .menu-toggle {
     display: flex; /* Show on mobile */
   }
-
   .header-nav-links {
     display: none; /* Hide on mobile by default */
   }
@@ -417,7 +520,11 @@ footer {
     max-width: 40%;
   }
 
-  .btn-container {
+  .btn-container1 {
+    margin-top: 1rem;
+  }
+
+  .btn-container2 {
     margin-top: 1rem;
   }
 

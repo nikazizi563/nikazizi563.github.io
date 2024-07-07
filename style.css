@@ -27,12 +27,13 @@ header {
   color: #fff;
   padding: 1rem 0;
   text-align: center;
-  position: relative;
+  top: 0;
+  position: sticky;
 }
 
 .header-logo {
   font-size: 1.5rem;
-  color: #fff;
+  color: #ffd700;
   text-decoration: none;
 }
 
@@ -42,7 +43,7 @@ header {
   cursor: pointer;
   display: none; /* Hide on desktop */
   position: absolute;
-  top: 1rem;
+  top: 1.27rem;
   right: 1rem;
   flex-direction: column;
   justify-content: center;
@@ -65,6 +66,7 @@ header {
 .header-nav-links ul {
   list-style-type: none;
   display: flex;
+  justify-content: center;
 }
 
 .header-nav-links ul li {
@@ -79,23 +81,11 @@ header {
 }
 
 .header-nav-links ul li a:hover {
-  color: #ffd700;
+  color: #979797;
 }
-
-.header-nav-links.active {
-  display: block;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: #333;
-  width: 100%;
-  text-align: center;
-  z-index: 1000; /* Ensure it overlays other content */
-}
-
-.header-nav-links.active ul {
-  flex-direction: column;
-  align-items: center;
+.header-nav-links ul li a.active {
+  color: #ffd700; /* Change to your desired active link color */
+  font-weight: bold; /* Optionally, make the active link bold */
 }
 
 /* Section styles */
@@ -156,7 +146,6 @@ section {
   justify-content: center;
 }
 
-
 .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -167,6 +156,7 @@ section {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 5px;
   border-radius: 4px;
 }
 
@@ -208,12 +198,6 @@ section {
   margin-left: auto;
   margin-right: auto;
   transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for hover effects */
-  opacity: 0.8; /* Slightly transparent by default */
-}
-
-.arrow:hover {
-  transform: translateY(-5px); /* Move up slightly on hover */
-  opacity: 1; /* Fully opaque on hover */
 }
 
 #backToTop {
@@ -233,12 +217,12 @@ section {
 }
 
 #backToTop:hover {
-  background-color: #333;
+  background-color: #444;
 }
 
 .collapsible {
   text-align: center;
-  background-color: #777;
+  background-color: #222;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -250,12 +234,12 @@ section {
   margin-bottom: 1rem; /* Increase the bottom margin */
 }
 
-.active, .collapsible:hover {
-  background-color: #555;
+.active,
+.collapsible:hover {
+  background-color: #777;
 }
 
 .content {
-  padding: 0 18px;
   display: none;
   overflow: hidden;
 }
@@ -294,6 +278,16 @@ section {
 .details-container2 {
   margin: 1rem;
   text-align: center;
+}
+
+.details-container {
+  flex: 1 1 calc(25% - 1rem); /* Allows four containers per row with some spacing */
+  margin: 1rem; /* Margin around each container */
+  padding: 1rem; /* Padding inside each container */
+  max-width: calc(25% - 2rem); /* Ensures max width with margins */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
+  display: flex;
+  flex-direction: column;
 }
 
 .text-container {
@@ -357,8 +351,7 @@ section {
 
 .project-btn {
   width: 150px; /* Set a fixed width */
-  height: 50px; /* Set a fixed height */
-  margin: 1rem;
+  height: 40px; /* Set a fixed height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -370,39 +363,20 @@ section {
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 4px;
+  background-color: #333; /* Example color */
 }
 
-/* Example of how you might style the button colors */
-.project-btn.btn-color-1 {
-  background-color: #333;
-}
-
-.project-btn.btn-color-1:hover {
+.project-btn:hover {
   background-color: #666;
 }
 
-.project-btn.btn-color-2 {
-  background-color: #ffd700;
-  color: #333;
+.project-details {
+  margin-top: 1rem;
+  text-align: left;
 }
 
-.project-btn.btn-color-2:hover {
-  background-color: #cba900;
-}
-
-.color-container {
-  flex: 1 1 calc(25% - 1rem); /* Allows four containers per row with some spacing */
-  margin: 1rem; /* Margin around each container */
-  padding: 1rem; /* Padding inside each container */
-  max-width: calc(25% - 2rem); /* Ensures max width with margins */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
-  display: flex;
-  flex-direction: column;
-}
-
-.color-container:hover {
-  transform: translateY(-5px); /* Hover effect to lift the section */
-  transition: transform 0.3s ease;
+.project-details p {
+  margin-bottom: 0.5rem;
 }
 
 /* Contact section */
@@ -479,60 +453,92 @@ footer {
   margin-top: 1rem;
 }
 
+/* Responsive adjustments */
 @media (max-width: 1200px) {
-  .color-container {
-    flex: 1 1 calc(50% - 1rem); /* Two containers per row on smaller screens */
+  .details-container,
+  .details-container1,
+  .details-container2 {
+    flex: 1 1 calc(50% - 1rem); /* Two containers per row on medium screens */
     max-width: calc(50% - 2rem);
+  }
+
+  .btn-container2 {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
-  .color-container {
-    flex: 1 1 100%; /* One container per row on mobile */
-    max-width: 100%;
-  }
-
-  .wrapper {
-    width: 90%;
-    margin: 0 auto;
+  header {
+    padding: 1rem;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
   }
 
   .menu-toggle {
-    display: flex; /* Show on mobile */
-  }
-  .header-nav-links {
-    display: none; /* Hide on mobile by default */
+    display: flex;
   }
 
-  .header-nav-links.active {
-    display: flex; /* Show when active */
+  .header-nav-links {
+    width: 80%;
+    display: none; /* Hide by default on mobile */
+    position: absolute;
+    top: 4rem; /* Adjust based on your header height */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    z-index: 1000;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Floating effect */
+    border-radius: 10px; /* Soft corners */
+    margin-top: 10px; /* Adjust margin-top for spacing */
+    max-width: 300px; /* Adjust maximum width as needed */
+  }
+
+  .header-nav-links ul {
     flex-direction: column;
-    width: 100%;
-    top: 60px;
+    align-items: center;
+    padding: 1rem 0;
   }
 
   .header-nav-links ul li {
     margin: 1rem 0;
   }
 
+
+  .menu-toggle.active .menu-icon:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .header-nav-links.active {
+    display: flex; /* Show active menu links */
+  }
+  .details-container,
+  .details-container1,
+  .details-container2 {
+    flex: 1 1 calc(100% - 1rem); /* Full width containers on small screens */
+    max-width: calc(100% - 2rem);
+  }
+
+  .about-containers1,
+  .about-containers2 {
+    flex: 1 1 100%; /* Full width for about section containers on small screens */
+  }
+
   .section__pic-container img {
     max-width: 40%;
   }
-
   .btn-container1 {
     margin-top: 1rem;
   }
-
-  .btn-container2 {
-    margin-top: 1rem;
-  }
-
   .article-container article {
     flex: 1 1 100%;
   }
+}
 
-  .contact-container {
-    flex-direction: column;
+@media (max-width: 576px) {
+  .section__pic-container img {
+    max-width: 60%; /* Further adjust image size on extra small screens */
   }
 }

@@ -35,3 +35,19 @@ for (let i = 0; i < coll.length; i++) {
         }
     });
 }
+// Smooth scroll with offset for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        const offset = 120; // Adjust this offset value according to your fixed header height
+
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - offset,
+                behavior: 'smooth'
+            });
+        }
+    });
+});

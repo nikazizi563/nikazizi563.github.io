@@ -33,8 +33,27 @@
         </ul>
       </nav>
     </header>
+    
+<!-- Popup Overlay -->
+<div class="popup-overlay hidden"></div>
 
-    <div class="wrapper">
+<!-- Social Media Popup -->
+<div id="social-media-popup" class="popup hidden">
+    <div class="popup-content">
+        <span class="close-button">&times;</span>
+        <h2>Follow Me</h2>
+        <ul>
+            <li><a href="https://tiktok.com/@ajiji_kun" target="_blank">Tiktok</a></li>
+            <li><a href="https://instagram.com/nikazizi00/reels/" target="_blank">Instagram</a></li>
+            <li><a href="https://linkedin.com/in/nik-azizi-nik-yahya-666994216/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/nikazizi563/" target="_blank">GitHub</a></li>
+            <li><a href="https://nikazizi12.github.io/" target="_blank">Personal Website</a></li>
+        </ul>
+    </div>
+</div>
+
+  
+    <div class="wrapper blur-background">
       <section id="profile">
         <div class="section__pic-container">
           <img
@@ -64,16 +83,19 @@
           </div>
           <div id="socials-container">
             <img
-              src="./assets/linkedin.png"
-              alt="My LinkedIn profile"
+              src="./assets/tiktok_icon.png"
               class="icon"
-              onclick="window.open('https://www.linkedin.com/in/nik-azizi-nik-yahya-666994216/', '_blank')"
+              onclick="showPopup()"
+            />
+            <img
+              src="./assets/linkedin.png"
+              class="icon"
+              onclick="showPopup()"
             />
             <img
               src="./assets/github.png"
-              alt="My Github profile"
               class="icon"
-              onclick="window.open('https://github.com/nikazizi563/', '_blank')"
+              onclick="showPopup()"
             />
           </div>
         </div>

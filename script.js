@@ -51,3 +51,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+    const socialMediaPopup = document.getElementById('social-media-popup');
+    const popupOverlay = document.querySelector('.popup-overlay');
+    const closeButton = document.querySelector('.close-button');
+    const contentWrapper = document.querySelector('.wrapper');
+
+    // Function to show the popup and blur the background
+    function showPopup() {
+        socialMediaPopup.classList.remove('hidden');
+        popupOverlay.classList.remove('hidden');
+        contentWrapper.classList.add('blur-background');
+    }
+
+    // Function to hide the popup and remove the blur effect
+    function hidePopup() {
+        socialMediaPopup.classList.add('hidden');
+        popupOverlay.classList.add('hidden');
+        contentWrapper.classList.remove('blur-background');
+    }
+
+    // Show the popup on page load
+    showPopup();
+
+    // Event listener for the close button
+    closeButton.addEventListener('click', hidePopup);
+
+    // Event listener for clicking outside the popup
+    window.addEventListener('click', (event) => {
+        if (event.target === popupOverlay) {
+            hidePopup();
+        }
+    });

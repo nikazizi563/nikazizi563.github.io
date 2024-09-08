@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+  background-color: #f0f4f8; /* Dark Blue Gray */
   line-height: 1.6;
 }
 
@@ -78,6 +79,7 @@ header {
   font-size: 16px;
 }
 
+
 /* Wrapper Styles */
 .wrapper {
   padding: 2rem;
@@ -85,6 +87,7 @@ header {
 
 /* Section Styles */
 section {
+  background-color: #fff;
   margin-bottom: 2rem;
 }
 
@@ -110,6 +113,7 @@ section {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  border-radius: 5px;
 }
 
 .section__pic-container img {
@@ -151,7 +155,7 @@ section {
 }
 
 .btn-color-3 {
-  background-color: #ec06c6;
+  background-color: #3498db;
 }
 
 #socials-container {
@@ -407,4 +411,17 @@ footer {
   .project-card, .skill-card {
     width: 90%;
   }
+}
+.text-container {
+  display: flex;
+  justify-content: center; /* Horizontally centers the text block */
+  align-items: center; /* Vertically centers the text block */
+  height: 100vh; /* Full viewport height */
+}
+
+.text-container p {
+  max-width: 600px; /* Optional: to limit the width for better readability */
+  padding: 1rem; /* Adds some padding for spacing */
+  font-size: 1.2rem; /* Adjust font size for better visibility */
+  text-align: justify; /* Justifies the text */
 }

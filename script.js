@@ -1,28 +1,36 @@
-// Function to toggle the menu
+// Smooth Scroll for navigation links
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('header nav a');
+  const menu = document.getElementById('nav-menu');
+  links.forEach(link => {
+      link.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+  // Event listener to close the menu when clicking outside of it
+  document.addEventListener('click', function (e) {
+      const menuToggle = document.querySelector('.menu-toggle'); // The button that opens the menu
+
+      if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+          menu.classList.remove('active'); // Close menu if click is outside
+      }
+  });
+
+});
 function toggleMenu() {
-    const navLinks = document.querySelector('.header-nav-links');
-    navLinks.classList.toggle('active');
-  }
-  
-  // Function to close the menu if clicked outside
-  function closeMenuOnClickOutside(event) {
-    const navLinks = document.querySelector('.header-nav-links');
-    const menuToggle = document.querySelector('.menu-toggle');
-  
-    if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-      navLinks.classList.remove('active');
-    }
-  }
-  
-  // Function to close the menu on scroll
-  function closeMenuOnScroll() {
-    const navLinks = document.querySelector('.header-nav-links');
-    if (navLinks.classList.contains('active')) {
-      navLinks.classList.remove('active');
-    }
-  }
-  
-  // Add event listeners
-  document.addEventListener('click', closeMenuOnClickOutside);
-  document.addEventListener('scroll', closeMenuOnScroll);
-  
+  const menu = document.getElementById('nav-menu');
+  menu.classList.toggle('active');
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Toggle Navbar Active State on Scroll
+window.addEventListener('scroll', function () {
+  const menu = document.getElementById('nav-menu');
+  menu.classList.remove('active');
+});

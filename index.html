@@ -1,385 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AZIZI Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <a href="#" class="header-logo">Portfolio</a>
-      <button class="menu-toggle" onclick="toggleMenu()">
-        <span class="menu-icon"></span>
-        <span class="menu-icon"></span>
-        <span class="menu-icon"></span>
-      </button>
-      <nav class="header-nav-links">
-        <ul>
-          <li><a href="#profile">Profile</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects1">Dev Projects</a></li>
-          <li><a href="#projects2">Comp Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>  
-    <div class="wrapper">
-      <section id="profile">
-        <div class="section__pic-container">
-          <img src="./assets/selfie.jpg" alt="profile picture" />
-        </div>
-        <div class="section__text">
-          <p class="section__text__p1">Hello, I'm</p>
-          <h1 class="title">Azizi Yahya</h1>
-          <p class="section__text__p2">
-            Graduate with a Diploma in Information Technology
-          </p>
-          <div class="btn-container1">
-            <button class="btn btn-color-2" onclick="location.href='#projects1'">
-              <span>Dev Projects</span>
-            </button>
-            <button class="btn btn-color-1" onclick="location.href='#projects2'">
-              <span>Comp Skills</span>
-            </button>
-          </div>
-          <div id="socials-container">
-            <img src="./assets/tiktok_icon.png" class="icon" onclick="window.open('https://tiktok.com/@ajiji_kun', '_blank')" />
-            <img src="./assets/youtube_icon.png" class="icon" onclick="window.open('https://youtube.com/@nikaziziyahya', '_blank')" />
-            <img src="./assets/linkedin.png" class="icon" onclick="window.open('https://linkedin.com/in/nik-azizi-nik-yahya-666994216/', '_blank')" />
-            <img src="./assets/github.png" class="icon" onclick="window.open('https://github.com/nikazizi563/', '_blank')" />
-          </div>
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azizi Yahya - Digital Resume</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <header class="header">
+    <div class="logo">Azizi Yahya</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <!-- <li><a href="#experience">Experience</a></li> -->
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <section id="about">
-        <div class="section-heading-container">
-          <p class="section__text__p1">Get To Know More</p>
-          <h1 class="title">About Me</h1>
-        </div>
-        <div class="section-container">
-          <div class="about-details-container">
-            <div class="about-containers1">
-              <div class="details-container1">
-                <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-                <h3>Experience</h3>
-                <p>
-                  <b>Computer Technician</b> (5 months)
-                </p>
-              </div>
-              <div class="details-container1">
-                <img src="./assets/education.png" alt="Education icon" class="icon" />
-                <h3>Education</h3>
-                <p>
-                  <b>DIPLOMA IT</b> CGPA 3.84 (JAN2024)<br><b>MUET</b> BAND 3 (2018)
-                </p>
-              </div>
-            </div>
-            <div class="text-container">
-              <p>
-                Hi, I'm Azizi Yahya,<br />a technology enthusiast with a diploma in Information Technology from Politechnic Besut, Terengganu.<br />
-                My expertise spans across various domains including software engineering, web development, and networking.<br />
-                I am passionate about using technology to innovate and improve business processes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience">
-        <div class="section-heading-container">
-          <p class="section__text__p1">Explore My</p>
-          <h1 class="title">Experience</h1>
-        </div>
-        <div class="experience-details-container">
-          <div class="about-containers2">
-            <div id="exp1" class="details-container2">
-              <h2 class="experience-sub-title">Software Development & Web Technologies</h2>
-              <div class="article-container">
-                <article>
-                  <span><i class="fab fa-html5"></i></span>
-                  <div>
-                    <h3>HTML, CSS, JavaScript & PHP</h3>
-                    <p>Basic</p>
-                    <p>Level 2 out of 5</p>
-                  </div>
-                </article>
-                <article>
-                  <span><i class="fab fa-java"></i></span>
-                  <div>
-                    <h3>Java, Android Studio & Flutter</h3>
-                    <p>Beginner</p>
-                    <p>Level 1 out of 5</p>
-                  </div>
-                </article>
-                <article>
-                  <span><i class="fab fa-python"></i></span>
-                  <div>
-                    <h3>Python, C++, VB.NET</h3>
-                    <p>Beginner</p>
-                    <p>Level 1 out of 5</p>
-                  </div>
-                </article>
-                <article>
-                  <span><i class="fab fa-git-alt"></i></span>
-                  <div>
-                    <h3>Version Control (Git & GitHub)</h3>
-                    <p>Basic</p>
-                    <p>Level 2 out of 5</p>
-                  </div>
-                </article>
-                <article>
-                  <span><i class="fas fa-database"></i></span>
-                  <div>
-                    <h3>SQL & Database Management</h3>
-                    <p>Beginner</p>
-                    <p>Level 1 out of 5</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <div id="exp2" class="details-container2">
-              <h2 class="experience-sub-title">IT & Computer Skills</h2>
-              <div class="article-container">
-                <article>
-                  <span><i class="fas fa-laptop"></i></span>
-                  <div>
-                    <h3>Laptop & PC Repair</h3>
-                    <p>Intermediate</p>
-                    <p>Level 4 out of 5</p>
-                  </div>
-                </article>
-                <article>
-                  <span><i class="fab fa-linux"></i></span>
-                  <div>
-                    <h3>Linux Systems & Administration</h3>
-                    <p>Beginner</p>
-                    <p>Level 1 out of 5</p>
-                  </div>
-                </article>
-                <article>
-                  <span><i class="fas fa-video"></i></span>
-                  <div>
-                    <h3>Video Editing</h3>
-                    <p>Basic</p>
-                    <p>Level 2 out of 5</p>
-                  </div>
-                </article>
-                <article>
-                  <span><i class="fas fa-file-alt"></i></span>
-                  <div>
-                    <h3>MS Office Software</h3>
-                    <p>Basic</p>
-                    <p>Level 2 out of 5</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects1">
-        <div class="section-heading-container">
-          <p class="section__text__p1">Showcasing My</p>
-          <h1 class="title">Software Development Projects</h1>
-        </div>
-        <div class="projects-container">
-          <div class="project-card">
-            <h2>Wifi Key Viewer [VB]</h2>
-            <p>
-              The Wifi Key Viewer is a Windows application developed in Visual Basic that allows users to view saved Wi-Fi passwords on their system. It offers a user-friendly interface for retrieving and displaying passwords stored
-            </p>
-            <img
-              src="./assets/pass_coding_projects/app-vbnet-wifi-key-checker.png"
-              alt="Project 1"
-              class="project-img"
-            />
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="window.open('https://github.com/nikazizi563/vb-Wifi-Password-Viewer/', '_blank')"
-            >
-              Github
-            </button>
-          </div>
-          <div class="project-card">
-            <h2>GPA Calculator [CPP]</h2>
-            <p>
-              The GPA Calculator is a command-line application developed in C++ that helps students calculate their Grade Point Average (GPA) based on their course grades. It provides an accurate GPA calculation.
-            </p>
-            <img
-              src="./assets/pass_coding_projects/app-cpp-gpa-calculator.png"
-              alt="Project 2"
-              class="project-img"
-            />
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="window.open('https://github.com/nikazizi563/cpp-GPA-Calculator/', '_blank')"
-            >
-              Github
-            </button>
-          </div>
-          <div class="project-card">
-            <h2>gForm Prefilled [Android Studio]</h2>
-            <p>
-              gForm Prefilled is an Android application built using Android Studio that automates the process of filling out Google Forms. It saves time and effort by pre-filling forms with user-specific information.
-            </p>
-            <img
-              src="./assets/pass_coding_projects/app-androidstudio-gform-prefill.png"
-              alt="Project 3"
-              class="project-img"
-            />
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="window.open('https://github.com/nikazizi563/AndroidStudio-gForm-AutoFill/', '_blank')"
-            >
-              Github
-            </button>
-          </div>
-          <div class="project-card">
-            <h2>Prayer Time Clock [Python]</h2>
-            <p>
-              The Prayer Time Clock is a Python application that calculates and displays prayer times for users based on their geographic location. It provides reminders and notifications for prayer times throughout the day.
-            </p>
-            <img
-              src="./assets/pass_coding_projects/app-python-prayer-times.png"
-              alt="Project 4"
-              class="project-img"
-            />
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="window.open('https://github.com/nikazizi563/app-maso-maye', '_blank')"
-            >
-              Github
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects2">
-        <div class="section-heading-container">
-          <p class="section__text__p1">Demonstrating My</p>
-          <h1 class="title">Computer Technician Skills</h1>
-        </div>
-        <div class="skills-container">
-          <div class="skill-card">
-            <h2>Skrin</h2>
-            <p>
-              Diagnosing and repairing a malfunctioning screen on a laptop. The project required identifying the issue, sourcing replacement parts, and performing the repair.
-            </p>
-            <img
-              src="./assets/intern/intern1skrin.jpg"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <div class="skill-card">
-            <h2>Services [Cooling]</h2>
-            <!-- related to cleaning the cooling system -->
-            <p>
-              Cleaning and maintaining the cooling system of computers and laptops. It focused on removing dust and debris from cooling fans and heatsinks to improve system performance and prevent overheating.
-            </p>
-            <img
-              src="./assets/intern/intern2cucikipas.jpg"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <div class="skill-card">
-            <h2>Hard Disk (HDD)</h2>
-            <p>
-              The Hard Disk project involved diagnosing and repairing issues related to hard disk drives (HDDs). This included data recovery, replacement of faulty drives, and performance optimization.
-            </p>
-            <img
-              src="./assets/intern/intern3hddproblem.jpg"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <div class="skill-card">
-            <h2>Format Win</h2>
-            <p>
-              This project focused on formatting and reinstalling Windows on computers. It included backing up user data, performing a clean installation of the operating system, and reinstalling necessary drivers and software.
-            </p>
-            <img
-              src="./assets/intern/intern4formatwin10.jpg"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <div class="skill-card">
-            <h2>Battery</h2>
-            <p>
-              The Battery project involved diagnosing and replacing faulty batteries in laptops and other portable devices. It included testing battery health, replacing defective batteries, and ensuring proper charging functionality.
-            </p>
-            <img
-              src="./assets/intern/intern5battery.jpg"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <div class="skill-card">
-            <h2>Printer</h2>
-            <p>
-              This project involved troubleshooting and repairing printer issues, including paper jams, connectivity problems, and print quality issues. It included cleaning and maintaining printers to ensure optimal performance.
-            </p>
-            <img
-              src="./assets/intern/intern6printer.jpg"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <div class="skill-card">
-            <h2>Software</h2>
-            <p>
-              The Software project involved installing, configuring, and troubleshooting various software applications, including office suites and productivity tools. It focused on ensuring proper functionality and addressing any software-related issues.
-            </p>
-            <img
-              src="./assets/intern/intern7msoffice.jpg"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          <div class="skill-card">
-            <h2>Services</h2>
-            <p>
-              This project involved providing a range of IT services, including system diagnostics, repair, and support. It included working with clients to address technical issues and provide effective solutions.
-            </p>
-            <img
-              src="./assets/intern/intern8services.jpg"
-              alt="Project 1"
-              class="project-img"
-            />
-          </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="section-heading-container">
-          <p class="section__text__p1">Get in Touch</p>
-          <button class="btn btn-color-3" onclick="window.open('https://aziziyahya.github.io/', '_blank')">
-            <span>Contact Me</span>
-          </button>
-        </div>
-      </section>
-
-      <button id="backToTop" title="Back to Top" style="display: none;">&uarr;</button>
-    </div>
-    <footer>
-      <div class="footer-bottom">
-        <p class="pfooter">&copy; 2024 Azizi Yahya. All rights reserved.</p>
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="section__pic-container">
+        <img src="./assets/profile.jpg" alt="profile picture" />
       </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+      <h1>Azizi Yahya</h1>
+      <p>Diploma IT Holder</p>
+      <a href="#contact" class="btn-main">Contact Me</a>
+    </div>
+  </section>
+
+  <div class="container">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <div class="text-container">
+        <p>I am a technology enthusiast with a diploma in IT. Although I have a growing knowledge base, I am driven by a strong desire to continuously expand my professional expertise and skills.</p>
+      </div>
+    </section>
+
+    <!-- <section id="experience" class="section">
+      <h2>Work Experience</h2>
+      <div class="job">
+        <h3>Job Title</h3>
+        <p>Company Name | Date Range</p>
+        <p>Brief description of your role and achievements.</p>
+      </div>
+    </section> -->
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <p><strong>Diploma Information Technology</strong>, <br><em>Politechnic Besut</em> &mdash; 2024</p>
+      <p><strong>Sijil Teknologi Mudah Alih</strong>, <br><em>Kolej Komuniti Kuala Pilah</em> - (transferred to higher education)</p>
+      <p><strong>MUET BAND 3</strong>, <br><em>Maahad Tarbiah Mardhiah</em> &mdash; 2018</p>
+      <p><strong>SPM</strong>, <br><em>Maahad Tarbiah Mardhiah</em> &mdash; 2017</p>
+
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Software Development:</strong> <br>Intermediate <br><a href="dev-projects.html" class="skill-link">Learn More</a></li>
+        <li><strong>Computer Technician:</strong> <br>Advanced <br><a href="comp-skills.html" class="skill-link">Learn More</a></li>
+        <li><strong>Web Development:</strong> <br>Intermediate</li>
+        <li><strong>Content Creation:</strong> <br>Beginner</li>
+        <li><strong>Video Editing:</strong> <br>Beginner</li>
+      </ul>
+      <div class="intro-container">
+        <p class="section-intro"><a href="skills.html">More in-detail Skills</a></p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact Information</h2>
+      <p>Email : <a href="mailto:nikazizicareer@gmail.com">nikazizicareer@gmail.com</a></p>
+      <p>LinkedIn : <a href="https://www.linkedin.com/in/nik-azizi-nik-yahya-666994216/" target="_blank">linkedin.com/in/nik-azizi-nik-yahya-666994216/</a>
+      </p>
+    </section>
+  </div>
+
+  <footer class="footer">
+    &copy; 2024 My Computer Setup | <a href='https://aziziyahya.github.io/' class='text-blue'>Social Media</a>
+  </footer>
+
+  <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+  <script src="script.js"></script>
+</body>
 </html>
